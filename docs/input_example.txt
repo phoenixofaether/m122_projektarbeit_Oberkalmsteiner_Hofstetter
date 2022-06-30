@@ -1,0 +1,4 @@
+https://gitlab.com/MDS160902/m122_praxisarbeit_desmitt_harlacher Benjamin_Harlacher_Michael_de_Smitt
+git@github.com:dmtbz/m122_mitrovic_mohammed.git Danilo_Mitrovic_Mahbube_Shafin_Mohammed
+git@gitlab.com:henry.irving2001/m122_praxisarbeit.git Henry_Irving_Justin_Feliz
+https://gitlab.com/Kilian-Epp/m122_luca_kilian Kilian_Epp_Luca_Gygli
