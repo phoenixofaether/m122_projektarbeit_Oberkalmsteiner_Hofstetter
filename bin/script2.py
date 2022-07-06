@@ -19,11 +19,11 @@ def main(argv):
     try:
         opts, args = getopt.getopt(argv,"hc:ib",["config_path=","input_file_path=", "base_dir_path"])
     except getopt.GetoptError:
-        print 'test.py -c <config_path> -i <input_file_path> -b <base_dir_path>'
+        print('test.py -c <config_path> -i <input_file_path> -b <base_dir_path>')
         sys.exit(2)
         for opt, arg in opts:
             if opt == '-h':
-                print 'test.py -c <config_path> -i <input_file_path> -b <base_dir_path>'
+                print('test.py -c <config_path> -i <input_file_path> -b <base_dir_path>')
                 sys.exit()
             elif opt in ("-c", "--config_path"):
                 config_path = arg
@@ -31,9 +31,9 @@ def main(argv):
                 input_file_path = arg
             elif opt in ("-b", "--base_dir_path"):
                 base_dir_path = arg
-                print 'Config file is "', config_path
-                print 'Input file is "', input_file_path
-                print 'Base directory is "', base_dir_path
+                print('Config file is "', config_path)
+                print('Input file is "', input_file_path)
+                print('Base directory is "', base_dir_path)
 
 if __name__ == "__main__":
     print('# ' + '=' * 78)
