@@ -23,6 +23,7 @@ Siehe doc/script1.pdf
 Dateiname: config.\*
 
 ```
+[Config]
 log_path=<path_to_logging_script>
 ```
 

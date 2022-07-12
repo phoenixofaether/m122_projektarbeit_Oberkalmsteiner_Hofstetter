@@ -1,0 +1,2 @@
+[Config]
+log_path=C:\temp\Test\log.txt
