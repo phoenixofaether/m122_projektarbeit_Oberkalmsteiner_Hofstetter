@@ -2,7 +2,7 @@
 __author__ = 'David Oberkalmsteiner'
 __teammates__ = 'Luca Hofstetter'
 __version__ = '1.0.2'
-__status__ = 'prototype'
+__status__ = 'release'
 __description__ = 'M122 / LB2 - Script 1'
 __date__ = '2022/07/04'
 
@@ -11,7 +11,6 @@ import argparse
 import os
 import configparser
 import shutil
-#os.environ["GIT_PYTHON_REFRESH"] = "quiet"
 import git
 import stat
 from log_script import Logger

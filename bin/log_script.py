@@ -1,5 +1,5 @@
 class Logger:
-    def __init__(self, path, title):
+    def __init__(self, title, path='log.log'):
         self.path = path
         self.title = str(title)
 

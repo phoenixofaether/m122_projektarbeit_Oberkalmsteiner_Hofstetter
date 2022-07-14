@@ -16,7 +16,11 @@ Anhand der Analyse wurde folgendes Lösungsdesign entworfen.
 
 ### Ablauf der Automation
 
-Siehe doc/script1.pdf
+<object data="../doc/script1.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="./doc/script1.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="./doc/script1.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
 
 ### Konfigurationsdateien
 
@@ -32,7 +36,3 @@ Dateiname: input_file.\*
 ```
 <github/gitlab> <folder_name>
 ```
-
-## Abgrenzungen zum Lösungsdesign
-
-TODO: Nachdem das Programm verwirklicht wurde hier die unterschiede von der Implemenatino zum Lösungsdesign beschreiben (was wurde anders gemacht, was wurde nicht gemacht, was wurde zusaetzlich gemacht)
