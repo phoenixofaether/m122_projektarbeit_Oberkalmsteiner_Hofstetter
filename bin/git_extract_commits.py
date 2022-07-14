@@ -11,7 +11,6 @@ __date__ = '2022/07/14'
 from git import Repo
 from datetime import datetime
 from log_script import Logger
-import csv
 import os
 import argparse
 
@@ -19,7 +18,7 @@ import argparse
 # function dateConverter: Convert a date to desired format
 def dateConverter(date):
     return(date.strftime("%m%d%Y"))
-    
+
 lines = []
 
 # Parser arguments: output, log, base_dir_path
