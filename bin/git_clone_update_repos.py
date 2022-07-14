@@ -13,18 +13,8 @@ import configparser
 import shutil
 #os.environ["GIT_PYTHON_REFRESH"] = "quiet"
 import git
-from log_script import log
-import errno
 import stat
-
-
-def handleRemoveReadonly(func, path, exc):
-    excvalue = exc[1]
-    if func in (os.rmdir, os.remove) and excvalue.errno == errno.EACCES:
-        os.chmod(path, stat.S_IRWXU | stat.S_IRWXG | stat.S_IRWXO)  # 0777
-        func(path)
-    else:
-        raise
+from log_script import log
 
 
 def is_valid_file(parser, arg):
@@ -57,7 +47,7 @@ folderNames = []
 file = open(args.input_file_path, "r", encoding='utf-8')
 for line in file:
     (githubLink, folderName) = line.split(' ')
-    folderNames.append(folderName)
+    folderNames.append(folderName.strip())
     folderPath = os.path.join(args.base_dir_path, folderName).strip()
 
     print(folderPath)
@@ -77,11 +67,16 @@ for line in file:
 
 # DELETE OTHER/OLD DIRECTORIES
 dirs = os.listdir(args.base_dir_path)
-print(dirs)
-print(folderNames)
 for dir in dirs:
     dirName = dir.strip()
+    print(dirName)
+    print(folderNames)
     if not dirName in folderNames:
-        shutil.rmtree(os.path.join(args.base_dir_path, dirName),
-                      ignore_errors=False, onerror=handleRemoveReadonly)
+        fullPath = os.path.join(args.base_dir_path, dirName)
+        for root, dirs, files in os.walk(fullPath):
+            for dir in dirs:
+                os.chmod(os.path.join(root, dir), stat.S_IRWXU)
+            for file in files:
+                os.chmod(os.path.join(root, file), stat.S_IRWXU)
+        shutil.rmtree(fullPath)
         log('Deleted ' + dirName)
