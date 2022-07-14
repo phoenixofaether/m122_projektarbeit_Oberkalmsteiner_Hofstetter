@@ -16,7 +16,7 @@ Ausserdem werden alte Ordner welche nicht im Input File enthalten sind gelöst.
 - Stelle sicher das Git isntalliert wurde. Dies kannst du tun indem du "git -v" in der Konsole eingibst.
 - Danach muss das Modul GitPython mit "pip isntall GitPython" heruntergeladen werden. (möglicherweise musst du dasselbe bei "argparse", "shutil" und "configparser" wiederholen)
 
-#### Mögliche Fehler
+#### Mögliche
 
 Falls es einen ImportModulError bei dem Modul GitPython auftritt, musst du die Environmentvariable "GIT_PYTHON_REFRESH" auf "quiet" stellen.
 
