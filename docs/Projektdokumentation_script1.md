@@ -16,9 +16,9 @@ Anhand der Analyse wurde folgendes Lösungsdesign entworfen.
 
 ### Ablauf der Automation
 
-<object data="https://github.com/phoenixofaether/m122_projektarbeit_Oberkalmsteiner_Hofstetter/blob/master/docs/script1.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/phoenixofaether/m122_projektarbeit_Oberkalmsteiner_Hofstetter/blob/master/docs/script1.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/phoenixofaether/m122_projektarbeit_Oberkalmsteiner_Hofstetter/blob/master/docs/script1.pdf">Download PDF</a>.</p>
+<object data="https://github.com/phoenixofaether/m122_projektarbeit_Oberkalmsteiner_Hofstetter/raw/master/docs/script1.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/phoenixofaether/m122_projektarbeit_Oberkalmsteiner_Hofstetter/raw/master/docs/script1.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/phoenixofaether/m122_projektarbeit_Oberkalmsteiner_Hofstetter/raw/master/docs/script1.pdf">Download PDF</a>.</p>
     </embed>
 </object>
 
