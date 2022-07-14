@@ -23,6 +23,7 @@ Siehe doc/script1.pdf
 Dateiname: config.\*
 
 ```
+[Config]
 log_path=<path_to_logging_script>
 ```
 
@@ -31,7 +32,3 @@ Dateiname: input_file.\*
 ```
 <github/gitlab> <folder_name>
 ```
-
-## Abgrenzungen zum Lösungsdesign
-
-TODO: Nachdem das Programm verwirklicht wurde hier die unterschiede von der Implemenatino zum Lösungsdesign beschreiben (was wurde anders gemacht, was wurde nicht gemacht, was wurde zusaetzlich gemacht)
