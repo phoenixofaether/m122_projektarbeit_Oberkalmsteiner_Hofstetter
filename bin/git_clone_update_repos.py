@@ -14,7 +14,7 @@ import shutil
 #os.environ["GIT_PYTHON_REFRESH"] = "quiet"
 import git
 import stat
-from log_script import log
+from log_script import Logger
 
 
 def is_valid_file(parser, arg):
@@ -41,6 +41,9 @@ config.sections()
 config.read(args.config_path)
 log_path = config['Config']['log_path']
 
+# initialize Logger
+logger = Logger(log_path, 'Clone & Update script')
+
 # ETHER CLONE OR PULL REPOS FROM LINKS
 folderNames = []
 
@@ -50,27 +53,23 @@ for line in file:
     folderNames.append(folderName.strip())
     folderPath = os.path.join(args.base_dir_path, folderName).strip()
 
-    print(folderPath)
     if(os.path.exists(folderPath)):
-        # os.chdir(folderPath)
         repo = git.Repo(folderPath)
         o = repo.remotes.origin
         o.pull()
-        log('Pulled ' + folderPath)
+        logger.log('Pulled ' + folderPath)
         repo.__del__()
         continue
     else:
         os.makedirs(folderPath)
-        log('Created ' + folderPath)
+        logger.log('Created ' + folderPath)
     repo = git.Repo.clone_from(githubLink, folderPath)
-    log('Cloned ' + folderPath + ' from ' + githubLink)
+    logger.log('Cloned ' + folderPath + ' from ' + githubLink)
 
 # DELETE OTHER/OLD DIRECTORIES
 dirs = os.listdir(args.base_dir_path)
 for dir in dirs:
     dirName = dir.strip()
-    print(dirName)
-    print(folderNames)
     if not dirName in folderNames:
         fullPath = os.path.join(args.base_dir_path, dirName)
         for root, dirs, files in os.walk(fullPath):
@@ -79,4 +78,4 @@ for dir in dirs:
             for file in files:
                 os.chmod(os.path.join(root, file), stat.S_IRWXU)
         shutil.rmtree(fullPath)
-        log('Deleted ' + dirName)
+        logger.log('Deleted ' + dirName)

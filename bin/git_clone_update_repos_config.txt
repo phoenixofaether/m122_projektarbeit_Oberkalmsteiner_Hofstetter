@@ -1,2 +1,2 @@
 [Config]
-log_path=./log.py
+log_path=./log.log
