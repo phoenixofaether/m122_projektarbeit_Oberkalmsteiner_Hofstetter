@@ -1,2 +1,2 @@
 [Config]
-log_path=C:\temp\Test\log.txt
+log_path=./log.py
